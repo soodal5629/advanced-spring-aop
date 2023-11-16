@@ -52,7 +52,7 @@ public class ParameterTest {
             log.info("[logArgs3] arg={}", arg);
         }
 
-        @Before("allMember() && this(obj)") // this는 프록시 객체를 전달 받는다.
+        @Before("allMember() && this(obj)") // this는 스프링 빈에 등록된 프록시 객체를 전달 받는다.
         public void thisArgs(JoinPoint joinPoint, MemberService obj) {
             log.info("[this]{}, obj={}", joinPoint.getSignature(), obj.getClass());
         }
