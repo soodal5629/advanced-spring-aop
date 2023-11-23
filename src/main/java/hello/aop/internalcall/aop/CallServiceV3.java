@@ -18,6 +18,4 @@ public class CallServiceV3 {
         log.info("call external");
         internalService.internal(); // 내부 메서드 호출(this.internal())
     }
-
-
 }
